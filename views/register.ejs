@@ -1,0 +1,35 @@
+<h1 class="middle">Register Page</h1>
+<div class="middle">
+  
+    <div class="container">
+        <%- include('partials/errorMessages', {errors, key: "message"})  %>
+        <form action="/users/register" method="POST">
+            <input 
+                class="input" 
+                type="text"
+                name="name"
+                placeholder="Insert your name" 
+                value="<%= typeof name !== 'undefined' ? name : '' %>"
+            />
+            <%- include('partials/errorMessages', {errors, key: "name"})  %>
+            <input 
+                class="input" 
+                type="email" 
+                name="email"
+                placeholder="Insert your email"
+                value="<%= typeof email !== 'undefined' ? email : '' %>"
+            />
+            <%- include('partials/errorMessages', {errors, key: "email"})  %>
+            <input 
+                class="input" 
+                type="password"
+                name="password"
+                placeholder="Insert your password" 
+                value="<%= typeof password !== 'undefined' ? password : '' %>"
+            />
+            <%- include('partials/errorMessages', {errors, key: "password"})  %>
+            <button type="submit">Submit</button
+        </form>
+    </div>
+</div>
+<div>If you already have account then <a href="/users/login">Login</a></div>

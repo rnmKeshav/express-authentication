@@ -1,0 +1,23 @@
+<h1 class="middle">Login Page</h1>
+<div class="middle">
+   
+    <div class="container">
+        <form action="/users/login">
+            <input 
+                class="input" 
+                type="email" 
+                placeholder="Insert your email"
+                value="<%= typeof email !== 'undefined' ? email : '' %>"
+            />
+            <input 
+                class="input" 
+                type="password"
+                placeholder="Insert your password" 
+                value="<%= typeof password !== 'undefined' ? password : '' %>"
+            />
+            <button type="submit" value="submit">Submit</button>
+        </form>
+    </div>
+    
+</div>
+<div>If you don't have account then <a href="/users/register">Register</a></div>

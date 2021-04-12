@@ -1,0 +1,6 @@
+<!-- <div class="error"><%= typeof errors.name !== 'undefined' ? errors.name : '' %></div> -->
+<% if (typeof errors != 'undefined') { %>
+    <% if (typeof key != 'undefined') { %>
+        <div class="error"><%= errors[key] %></div>
+    <% } %>
+<% } %>
